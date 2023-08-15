@@ -36,4 +36,52 @@ print(cars);//[Range Rover, Mercedes, Ferrari, Audi, Subaru, Bugatti, Mobius]
 cars.insertAll(6, ['VolksWagen','Jaguar','Jeep']);
 print(cars); //[Range Rover, Mercedes, Ferrari, Audi, Subaru, Bugatti, VolksWagen, Jaguar, Jeep, Mobius]
 
+// Checking if the list is empty
+print(cars.isEmpty);//false
+
+//Checking if the list is not empty
+print(cars.isNotEmpty);//true
+
+// Getting the first element of the list
+print(cars.first);//Range Rover
+
+// Getting the last element of the list
+print(cars.last);//Mobius
+
+// Removing elements from the list
+'''
+1.remove('element') - This method removes the first occurrence of the specified element from the list
+2.removeAt(index) - Removes the element at the specified index from the list
+3.contains('element') - This method returns true if the specified element is in the list
+4.indexOf('element') - This method returns the index of the element in the list
+5.clear() - This method clears the list/removes all the elements from the list
+6.sort() - This method sorts the list in ascending order
+''';
+
+// Remove
+cars.remove("Mobius");
+print(cars);//[Range Rover, Mercedes, Ferrari, Audi, Subaru, Bugatti, VolksWagen, Jaguar, Jeep]
+
+// RemoveAt
+cars.removeAt(1); // Mercedes will be removed from the list
+print(cars); //[Range Rover, Ferrari, Audi, Subaru, Bugatti, VolksWagen, Jaguar, Jeep]
+
+// Contains
+print(cars.contains("Ferrari"));//true
+print(cars.contains('Mercedes'));//false
+
+// indexOf
+var fruits = ['Guavas','Oranges','Papaya','Kiwi','Water melon'];
+print(fruits.indexOf('Kiwi'));//3
+
+
+// sort
+fruits.sort();
+print(fruits);//[Guavas, Kiwi, Oranges, Papaya, Water melon]
+
+// Clear 
+fruits.clear();
+print(fruits);//[]
+
+
 }
